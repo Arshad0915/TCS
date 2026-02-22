@@ -1,0 +1,22 @@
+# Rearrange array in increasing-decreasing order
+
+
+
+# 1
+
+# Problem Statement: Rearrange a given array such that the first half is arranged in increasing order, and the second half is arranged in decreasing order
+
+# Examples
+# Input: [8 7 1 6 5 9]
+# Output: [1 5 6 9 8 7]
+# Explanation: First three elements are in the ascending order and next three elements are in the descending order.
+# Input: [4 2 8 6 15 5 9 20]
+# Output: [2 4 5 6 20 15 9 8]
+# Explanation: First four elements are in the ascending order and next four elements are in the descending order.
+
+l=list(map(int,input().split()))
+l.sort()
+mid=(len(l)+1)//2
+first=l[:mid]
+second=l[mid:][::-1]
+print(first+second)
